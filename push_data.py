@@ -18,16 +18,17 @@ from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 
 class NetworkDataExtract():
-    def __init__(self):
+    def __init__(self): 
         try:
             pass
         except Exception as e:
             raise NetworkSecurityException(e,sys)
-        
+        #converting in json format
     def csv_to_json_convertor(self,file_path):
         try:
             data=pd.read_csv(file_path)
             data.reset_index(drop=True,inplace=True)
+            #will be a list of json
             records=list(json.loads(data.T.to_json()).values())
             return records
         except Exception as e:
@@ -47,10 +48,10 @@ class NetworkDataExtract():
             return(len(self.records))
         except Exception as e:
             raise NetworkSecurityException(e,sys)
-        
+        #execution of pipeline
 if __name__=='__main__':
-    FILE_PATH="Network_Data\phisingData.csv"
-    DATABASE="KRISHAI"
+    FILE_PATH="Network_Data/phisingData.csv"
+    DATABASE="DEVVV"
     Collection="NetworkData"
     networkobj=NetworkDataExtract()
     records=networkobj.csv_to_json_convertor(file_path=FILE_PATH)

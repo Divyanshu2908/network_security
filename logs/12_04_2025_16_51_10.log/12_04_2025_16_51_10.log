@@ -1,0 +1,8 @@
+[ 2025-12-04 16:51:14,345 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-04 16:51:14,350 ] 107 dagshub - INFO - Accessing as Divyanshu2908
+[ 2025-12-04 16:51:15,328 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/krishnaik06/networksecurity "HTTP/1.1 404 Not Found"
+[ 2025-12-04 16:51:15,329 ] 107 dagshub - INFO - Repository networksecurity doesn't exist, creating it under current user.
+[ 2025-12-04 16:51:16,739 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/api/v1/user/repos "HTTP/1.1 201 Created"
+[ 2025-12-04 16:51:17,702 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-04 16:51:17,710 ] 107 dagshub - INFO - Initialized MLflow to track repo "krishnaik06/networksecurity"
+[ 2025-12-04 16:51:17,711 ] 107 dagshub - INFO - Repository krishnaik06/networksecurity initialized!

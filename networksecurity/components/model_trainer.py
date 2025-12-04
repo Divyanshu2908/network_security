@@ -26,13 +26,24 @@ from sklearn.ensemble import (
 import mlflow
 from urllib.parse import urlparse
 
+
+import os
 import dagshub
-#dagshub.init(repo_owner='krishnaik06', repo_name='networksecurity', mlflow=True)
+dagshub.init(
+    repo_owner='Divyanshu2908',
+    repo_name='network_security',
+    mlflow=True
+)
 
-os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/krishnaik06/networksecurity.mlflow"
-os.environ["MLFLOW_TRACKING_USERNAME"]="krishnaik06"
-os.environ["MLFLOW_TRACKING_PASSWORD"]="7104284f1bb44ece21e0e2adb4e36a250ae3251f"
+# REQUIRED ENV VARIABLES
+os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/Divyanshu2908/network_security.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"] = "Divyanshu2908"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "6375ee43cb57e44ade464a74398c77870d7753d6"
 
+import mlflow
+with mlflow.start_run():
+    mlflow.log_param('parameter name', 'value')
+    mlflow.log_metric('metric name', 1)
 
 
 
